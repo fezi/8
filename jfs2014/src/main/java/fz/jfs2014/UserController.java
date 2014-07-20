@@ -41,13 +41,4 @@ public class UserController {
 		return userRepo.findOne(userId);
 	}
 
-	@RequestMapping("/")
-	public String root() {
-		log.info("render form");
-		return "<html><body><form method='post' action='/user'>"
-				+ "Name: <input name='name'/><br/>E-Mail: <input name='email' type='email' value='default@email'/><br/> "
-				+ "Passwort: <input name='password' type='password'  value='password'/><br/>"
-				+ "<input type='submit' value='create'/>" + "</form><a href='/user'>to user list</a></body></html>";
-	}
-
 }

@@ -23,11 +23,10 @@ public class Starter {
 	}
 
 	private static void makeUsers(UserRepo userRepo) {
-		userRepo.save(new User("Jack"));
-		userRepo.save(new User("Chloe"));
-		userRepo.save(new User("Jack"));
-		userRepo.save(new User("David"));
-		userRepo.save(new User("Michelle"));
+		userRepo.save(new User("Jack", "jack@de", "pw"));
+		userRepo.save(new User("Chloe", "chloe@de", "pw"));
+		userRepo.save(new User("Jack", "jack2@de", "pw"));
+		userRepo.save(new User("David", "jack2@de", "pw"));
 
 		// fetch all Users
 		Iterable<User> Users = userRepo.findAll();
